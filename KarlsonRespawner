@@ -1,0 +1,16 @@
+using UnityEngine;
+
+public class KarlsonRespawner : MonoBehaviour
+{
+    public Transform player;
+    public Transform respawnPoint;
+    public string milkTag = "Start";
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag(milkTag))
+        {
+            player.position = respawnPoint.position;
+        }
+    }
+}
